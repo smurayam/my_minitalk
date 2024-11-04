@@ -6,13 +6,14 @@
 /*   By: smurayam <smurayam@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 06:39:15 by smurayam          #+#    #+#             */
-/*   Updated: 2024/10/25 16:40:43 by smurayam         ###   ########.fr       */
+/*   Updated: 2024/11/03 13:50:31 by smurayam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(int c)
 {
-	if (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z'))
+	if (('a' <= (char)c && (char)c <= 'z') || ('A' <= (char)c
+			&& (char)c <= 'Z'))
 		return (1024);
 	else
 		return (0);
