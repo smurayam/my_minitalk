@@ -6,7 +6,7 @@
 /*   By: smurayam <smurayam@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 00:22:07 by smurayam          #+#    #+#             */
-/*   Updated: 2024/11/04 01:20:04 by smurayam         ###   ########.fr       */
+/*   Updated: 2024/11/15 01:41:24 by smurayam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,5 +67,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ptr[i] = 0;
 	return (ptr);
 }
+
 
 // why not "if (len > s_len)"

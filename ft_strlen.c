@@ -6,13 +6,16 @@
 /*   By: smurayam <smurayam@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 07:05:53 by smurayam          #+#    #+#             */
-/*   Updated: 2024/11/03 13:54:45 by smurayam         ###   ########.fr       */
+/*   Updated: 2024/11/24 23:52:57 by smurayam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *s)
+#include <stdio.h>
+#include <string.h>
+
+size_t	ft_strlen(const char *s)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (s[i] != '\0')
@@ -20,12 +23,12 @@ int	ft_strlen(const char *s)
 	return (i);
 }
 
-// #include <stdio.h>
-
 // int	main(void)
 // {
-// 	printf("%d\n", ft_strlen("aaaaa"));
+// 	const char	*s;
+
+// 	s = "wa-i";
+// 	printf("%zu\n", ft_strlen(s));
+// 	printf("%zu\n", strlen(s));
 // 	return (0);
 // }
-
-// do strlcat

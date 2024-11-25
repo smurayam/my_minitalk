@@ -6,18 +6,18 @@
 /*   By: smurayam <smurayam@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 09:42:06 by smurayam          #+#    #+#             */
-/*   Updated: 2024/11/03 15:35:29 by smurayam         ###   ########.fr       */
+/*   Updated: 2024/11/25 01:08:36 by smurayam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include <stdio.h>
+#include <string.h>
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char	*ptr;
-	size_t			i;
+	size_t	i;
 
+	unsigned char *ptr; // why unsigned
 	ptr = (unsigned char *)s;
 	i = 0;
 	while (i < n)
@@ -25,17 +25,27 @@ void	*ft_memset(void *s, int c, size_t n)
 		ptr[i] = c;
 		i++;
 	}
-	return (s);
+	return (ptr);
 }
 
-int	main(void)
-{
-	char	buffer[10] = "aaa";
+// int	main(void)
+// {
+// 	char	s[] = "ooowao";
+// 	char	t[] = "ooowao";
+// 	int		c;
+// 	size_t	n;
 
-	printf("%s\n", (char *)ft_memset(buffer, 'b', 2));
-	return (0);
-}
-
+// 	c = 47;
+// 	n = 3;
+// 	printf("before:s:%s\n", s);
+// 	printf("before:t:%s\n", t);
+// 	ft_memset(s, c, n);
+// 	memset(t, c, n);
+// 	printf("after ft_memset:%s\n", s);
+// 	printf("after memset:%s\n", t);
+// 	return (0);
+// }
+// when you treat memori, use unsigned char;
 // ok(or try again main)
 
 // void	*ft_memset(void *s, int c, unsigned int n)

@@ -6,7 +6,7 @@
 /*   By: smurayam <smurayam@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 07:07:53 by smurayam          #+#    #+#             */
-/*   Updated: 2024/11/05 03:25:19 by smurayam         ###   ########.fr       */
+/*   Updated: 2024/11/25 01:08:57 by smurayam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,21 +70,22 @@ char	**ft_split(char const *s, char c)
 	return (ptr);
 }
 
-int	main(void)
-{
-	char const	*s;
-	char		**tab;
-	char		c;
+// int	main(void)
+// {
+// 	char const	*s;
+// 	char		**tab;
+// 	char		c;
 
-	s = "   hey kevin ! ";
-	c = ' ';
-	tab = ft_split(s, c);
-	for (int i = 0; tab[i]; i++)
-		printf("%s\n", tab[i]);
-	// printf("%d\n", count_words(s, c)); // 3
-	// // printf("%p\n", heads_line(s, c));
-	// // printf("%s\n", heads_line(s, c));
-	// printf("%p\n", ft_split(s, c));
-	return (0);
-}
+// 	s = "   hey kevin ! ";
+// 	c = ' ';
+// 	tab = ft_split(s, c);
+// 	for (int i = 0; tab[i]; i++)
+// 		printf("%s\n", tab[i]);
+// 	// printf("%d\n", count_words(s, c)); // 3
+// 	// // printf("%p\n", heads_line(s, c));
+// 	// // printf("%s\n", heads_line(s, c));
+// 	// printf("%p\n", ft_split(s, c));
+// 	return (0);
+// }
 // // cかcじゃないかがミソ❗
+// mallocno null gard and substr null gard free
