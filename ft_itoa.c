@@ -1,66 +1,107 @@
+```c
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smurayam <smurayam@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 03:35:50 by smurayam          #+#    #+#             */
-/*   Updated: 2024/11/25 01:06:28 by smurayam         ###   ########.fr       */
+/*   Created: 2024/11/02 07:07:53 by smurayam          #+#    #+#             */
+/*   Updated: 2024/12/14 09:10:18 by smurayam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
-#include <stdlib.h>
 
-// 数字からascii putnbr出力だけ違う
-int	check_digit(int n)
+int	count_words(char const *s, char c)
+{
+	int	i;
+	int	count;
+
+	i = 0;
+	count = 0;
+	while (s[i] != 0)
+	{
+		if ((i == 0 || s[i - 1] == c) && s[i] != c)
+			count++;
+		i++;
+	}
+	return (count);
+}
+
+int	length_of_words(char const *s, char c)
 {
 	int	i;
 
 	i = 0;
-	if (n <= 0)
-		i = 1;
-	while (n != 0)
+	while (s[i] != c && s[i])
 	{
-		n /= 10;
 		i++;
 	}
 	return (i);
 }
-char	*ft_itoa(int n)
-{
-	int		i;
-	char	*ptr;
 
-	i = check_digit(n);
-	ptr = malloc(i + 1);
-	if(!ptr)
-		return NULL;
-	if(n==0)
+char	**free_return_null(char **ptr, int i)
+{
+	int	love;
+
+	love = 0;
+	while (love < i)
 	{
-		ptr[0] = '0';
-		return ptr;
+		free(ptr[love]);
+		love++;
 	}
-	if (n < 0)
+	free(ptr);
+	return (NULL);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**ptr;
+	int		i;
+	int		j;
+	int		word_len;
+
+	i = 0;
+	j = 0;
+	if (!s)
+		return (NULL);
+	ptr = (char **)malloc((count_words(s, c) + 1) * sizeof(char *));
+	if (!ptr)
+		return (NULL);
+	while (i < count_words(s, c))
 	{
-		ptr[0] = '-';
-		n = -n;
+		while (s[j] == c)
+			j++;
+		word_len = length_of_words(&s[j], c);
+		ptr[i] = ft_substr(s, j, word_len);
+		if (!ptr[i])
+			return (free_return_null(ptr, i));
+		j += word_len;
+		i++;
 	}
-	while (i > 0)
-	{
-		ptr[i] = (n % 10) + '0';
-		n /= 10;
-		i--;
-	}
-	ptr[check_digit(n)] = 0;
+	ptr[i] = NULL;
 	return (ptr);
 }
 
-// int	main(void)
-// {
-// 	int n = 123;
-// 	printf("%d\n", n);
-// 	printf("%s\n", ft_itoa(n));
-// 	return (0);
-// }
+int	main(void)
+{
+	char	**tab;
+	char	c;
+
+	// char const	*s;
+	// s = strdup("Toripouille");
+	c = ' ';
+	tab = ft_split("aiueo kaki kue", ' ');
+	// tab = ["aiueo", "kaki", "kue"];
+	for (int i = 0; tab[i]; i++)
+		printf("%s\n", tab[i]);
+	// printf("%d\n", count_words(s, c)); // 3
+	// // printf("%p\n", heads_line(s, c));
+	// // printf("%s\n", heads_line(s, c));
+	// printf("%p\n", ft_split(s, c));
+	return (0);
+}
+// // its matter whether its C or notC
+// mallocno null gard and substr null gard free
