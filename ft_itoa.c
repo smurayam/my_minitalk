@@ -1,13 +1,12 @@
-```c
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smurayam <smurayam@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: nnnya <nnnya@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 07:07:53 by smurayam          #+#    #+#             */
-/*   Updated: 2024/12/14 09:10:18 by smurayam         ###   ########.fr       */
+/*   Updated: 2025/09/26 02:24:10 by nnnya            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +83,7 @@ char	**ft_split(char const *s, char c)
 	ptr[i] = NULL;
 	return (ptr);
 }
-
+/*
 int	main(void)
 {
 	char	**tab;
@@ -103,5 +102,5 @@ int	main(void)
 	// printf("%p\n", ft_split(s, c));
 	return (0);
 }
-// // its matter whether its C or notC
-// mallocno null gard and substr null gard free
+*/
+// malloc's null gard and substr null gard free

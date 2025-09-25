@@ -36,7 +36,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	j = ft_strlen(src);
 	return (first_dstlen + ft_strlen(src));
 }
-size_t	strlcat(char *dst, const char *src, size_t size);
+//size_t	strlcat(char *dst, const char *src, size_t size);
 
 /*
 void	run_test(char *dst, const char *src, size_t size,

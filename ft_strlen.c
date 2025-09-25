@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smurayam <smurayam@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: nnnya <nnnya@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 07:05:53 by smurayam          #+#    #+#             */
-/*   Updated: 2024/11/24 23:52:57 by smurayam         ###   ########.fr       */
+/*   Updated: 2025/09/26 02:07:57 by nnnya            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
 #include <string.h>
 
