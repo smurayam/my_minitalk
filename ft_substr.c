@@ -3,36 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smurayam <smurayam@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: nnnya <nnnya@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 00:22:07 by smurayam          #+#    #+#             */
-/*   Updated: 2024/11/15 01:41:24 by smurayam         ###   ########.fr       */
+/*   Updated: 2025/09/26 17:53:35 by nnnya            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-
-// int		ft_strlen(const char *s);
-
-// char	*ft_substr(char const *s, unsigned int start, size_t len)
-// {
-// 	int i;
-// 	i = 0;
-// 	char	*ptr;
-// 	while(s[i] != 0)
-// 	{
-// 		i ++;
-// 	}
-// 	return (ptr);
-// }
-
-// int	main(void)
-// {
-// 	char	s[] = "I am waking up";
-
-// 	printf(s, 4, 6); // m wa
-// 	return (0);
-// }
 
 #include <stdlib.h>
 
@@ -69,4 +46,4 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 }
 
 
-// why not "if (len > s_len)"
+// check "if (len > s_len)"

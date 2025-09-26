@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smurayam <smurayam@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: nnnya <nnnya@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 04:58:15 by smurayam          #+#    #+#             */
-/*   Updated: 2024/11/02 07:07:25 by smurayam         ###   ########.fr       */
+/*   Updated: 2025/09/26 17:53:05 by nnnya            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// i don't understand
 #include <stdlib.h>
 
 int	ft_strlen(const char *s)
