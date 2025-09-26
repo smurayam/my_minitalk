@@ -6,13 +6,11 @@
 /*   By: nnnya <nnnya@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 23:43:21 by smurayam          #+#    #+#             */
-/*   Updated: 2025/09/26 17:36:24 by nnnya            ###   ########.fr       */
+/*   Updated: 2025/09/26 17:59:02 by nnnya            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
 int		ft_strlen(const char *s);
 char	*ft_strdup(const char *s)

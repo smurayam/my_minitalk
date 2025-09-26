@@ -6,13 +6,11 @@
 /*   By: nnnya <nnnya@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 07:07:53 by smurayam          #+#    #+#             */
-/*   Updated: 2025/09/26 17:34:10 by nnnya            ###   ########.fr       */
+/*   Updated: 2025/09/26 17:58:49 by nnnya            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 int		ft_strlen(const char *s);
 char	*ft_substr(char const *s, unsigned int start, size_t len);

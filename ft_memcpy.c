@@ -6,12 +6,11 @@
 /*   By: nnnya <nnnya@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 11:42:32 by smurayam          #+#    #+#             */
-/*   Updated: 2025/09/26 16:41:13 by nnnya            ###   ########.fr       */
+/*   Updated: 2025/09/26 17:57:39 by nnnya            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

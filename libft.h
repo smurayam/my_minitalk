@@ -6,7 +6,7 @@
 /*   By: nnnya <nnnya@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 17:54:34 by hmisaki           #+#    #+#             */
-/*   Updated: 2025/09/26 02:11:55 by nnnya            ###   ########.fr       */
+/*   Updated: 2025/09/26 17:56:21 by nnnya            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
+# include <stdio.h>
+# include <ctype.h>
 
 typedef struct s_list
 {

@@ -6,12 +6,11 @@
 /*   By: nnnya <nnnya@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 03:35:50 by smurayam          #+#    #+#             */
-/*   Updated: 2025/09/26 16:38:28 by nnnya            ###   ########.fr       */
+/*   Updated: 2025/09/26 17:57:23 by nnnya            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 int	check_digit(int n)
 {

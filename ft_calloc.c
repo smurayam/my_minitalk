@@ -6,12 +6,11 @@
 /*   By: nnnya <nnnya@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 19:46:31 by smurayam          #+#    #+#             */
-/*   Updated: 2025/09/26 16:12:49 by nnnya            ###   ########.fr       */
+/*   Updated: 2025/09/26 17:55:56 by nnnya            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n);
 

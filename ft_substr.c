@@ -6,12 +6,11 @@
 /*   By: nnnya <nnnya@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 00:22:07 by smurayam          #+#    #+#             */
-/*   Updated: 2025/09/26 17:53:35 by nnnya            ###   ########.fr       */
+/*   Updated: 2025/09/26 18:00:13 by nnnya            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include <stdlib.h>
+#include "libft.h"
 
 int		ft_strlen(const char *s);
 

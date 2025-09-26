@@ -6,13 +6,11 @@
 /*   By: nnnya <nnnya@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 14:38:45 by smurayam          #+#    #+#             */
-/*   Updated: 2025/09/26 02:14:27 by nnnya            ###   ########.fr       */
+/*   Updated: 2025/09/26 17:55:44 by nnnya            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 size_t	ft_strlen(const char *s);
 
