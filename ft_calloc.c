@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smurayam <smurayam@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: nnnya <nnnya@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 19:46:31 by smurayam          #+#    #+#             */
-/*   Updated: 2024/11/25 01:05:34 by smurayam         ###   ########.fr       */
+/*   Updated: 2025/09/26 16:12:49 by nnnya            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,26 +40,4 @@ void	*ft_calloc(size_t nmemb, size_t size)
 // 	printf("%p\n", ft_calloc(nmemb, size));
 // 	printf("%p\n", calloc(nmemb, size));
 // 	return (0);
-// }
-
-// when you use size_t, think about size_t's max
-
-// #include <stdlib.h>
-// #include <string.h>
-
-// void	*ft_calloc(size_t nmemb, size_t size)
-// {
-// 	char	*ptr;
-// 	size_t	i;
-
-// 	ptr = malloc(nmemb * size);
-// 	i = 0;
-// 	if (ptr == NULL)
-// 		return (NULL);
-// 	while (i < nmemb * size)
-// 	{
-// 		ptr[i] = 0;
-// 		i++;
-// 	}
-// 	return (ptr);
 // }

@@ -5,102 +5,62 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nnnya <nnnya@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/02 07:07:53 by smurayam          #+#    #+#             */
-/*   Updated: 2025/09/26 02:24:10 by nnnya            ###   ########.fr       */
+/*   Created: 2024/11/05 03:35:50 by smurayam          #+#    #+#             */
+/*   Updated: 2025/09/26 16:38:28 by nnnya            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <stdio.h>
+#include <stdlib.h>
 
-int	count_words(char const *s, char c)
-{
-	int	i;
-	int	count;
-
-	i = 0;
-	count = 0;
-	while (s[i] != 0)
-	{
-		if ((i == 0 || s[i - 1] == c) && s[i] != c)
-			count++;
-		i++;
-	}
-	return (count);
-}
-
-int	length_of_words(char const *s, char c)
+int	check_digit(int n)
 {
 	int	i;
 
 	i = 0;
-	while (s[i] != c && s[i])
+	if (n <= 0)
+		i = 1;
+	while (n != 0)
 	{
+		n /= 10;
 		i++;
 	}
 	return (i);
 }
-
-char	**free_return_null(char **ptr, int i)
+char	*ft_itoa(int n)
 {
-	int	love;
-
-	love = 0;
-	while (love < i)
-	{
-		free(ptr[love]);
-		love++;
-	}
-	free(ptr);
-	return (NULL);
-}
-
-char	**ft_split(char const *s, char c)
-{
-	char	**ptr;
 	int		i;
-	int		j;
-	int		word_len;
+	char	*ptr;
 
-	i = 0;
-	j = 0;
-	if (!s)
-		return (NULL);
-	ptr = (char **)malloc((count_words(s, c) + 1) * sizeof(char *));
-	if (!ptr)
-		return (NULL);
-	while (i < count_words(s, c))
+	i = check_digit(n);
+	ptr = malloc(i + 1);
+	if(!ptr)
+		return NULL;
+	if(n==0)
 	{
-		while (s[j] == c)
-			j++;
-		word_len = length_of_words(&s[j], c);
-		ptr[i] = ft_substr(s, j, word_len);
-		if (!ptr[i])
-			return (free_return_null(ptr, i));
-		j += word_len;
-		i++;
+		ptr[0] = '0';
+		return ptr;
 	}
-	ptr[i] = NULL;
+	if (n < 0)
+	{
+		ptr[0] = '-';
+		n = -n;
+	}
+	while (i > 0)
+	{
+		ptr[i] = (n % 10) + '0';
+		n /= 10;
+		i--;
+	}
+	ptr[check_digit(n)] = 0;
 	return (ptr);
 }
-/*
-int	main(void)
-{
-	char	**tab;
-	char	c;
 
-	// char const	*s;
-	// s = strdup("Toripouille");
-	c = ' ';
-	tab = ft_split("aiueo kaki kue", ' ');
-	// tab = ["aiueo", "kaki", "kue"];
-	for (int i = 0; tab[i]; i++)
-		printf("%s\n", tab[i]);
-	// printf("%d\n", count_words(s, c)); // 3
-	// // printf("%p\n", heads_line(s, c));
-	// // printf("%s\n", heads_line(s, c));
-	// printf("%p\n", ft_split(s, c));
-	return (0);
-}
-*/
-// malloc's null gard and substr null gard free
+// int	main(void)
+// {
+// 	int n = 123;
+// 	printf("%d\n", n);
+// 	printf("%s\n", ft_itoa(n));
+// 	return (0);
+// }
+//different just output from ft_putnbr

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smurayam <smurayam@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: nnnya <nnnya@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 11:19:14 by smurayam          #+#    #+#             */
-/*   Updated: 2024/11/20 20:36:26 by smurayam         ###   ########.fr       */
+/*   Updated: 2025/09/26 15:49:31 by nnnya            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,18 +41,4 @@ void	ft_bzero(void *s, size_t n)
 // 	printf("after ft_bzero:%s\n", s);
 // 	printf("after bzero:%s\n", t);
 // 	return (0);
-// }
-
-// void	ft_bzero(void *s, size_t n)
-// {
-// 	size_t i;
-// 	unsigned char *ptr;
-
-// 	ptr = (unsigned char *)s;
-// 	i = 0;
-// 	while (i < n)
-// 	{
-// 		ptr[i] = 0;
-// 		i++;
-// 	}
 // }
