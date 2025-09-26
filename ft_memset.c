@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smurayam <smurayam@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: nnnya <nnnya@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 09:42:06 by smurayam          #+#    #+#             */
-/*   Updated: 2024/11/25 01:08:36 by smurayam         ###   ########.fr       */
+/*   Updated: 2025/09/26 17:31:29 by nnnya            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t	i;
 
-	unsigned char *ptr; // why unsigned
+	unsigned char *ptr;
 	ptr = (unsigned char *)s;
 	i = 0;
 	while (i < n)
@@ -45,37 +45,7 @@ void	*ft_memset(void *s, int c, size_t n)
 // 	printf("after memset:%s\n", t);
 // 	return (0);
 // }
-// when you treat memori, use unsigned char;
-// ok(or try again main)
-
-// void	*ft_memset(void *s, int c, unsigned int n)
-// {
-// 	unsigned int	i;
-// 	unsigned char	*ptr;
-
-// 	i = 0;
-// 	ptr = (unsigned char *)s;
-// 	while (i < n)
-// 	{
-// 		ptr[i] = (unsigned char)c;
-// 		i++;
-// 	}
-// 	return (s);
-// }
-
-// #include <stdio.h>
-
-// int	ft_strlen(const char *s)
-// {
-// 	int	i;
-
-// 	i = 0;
-// 	while (s[i] != '\0')
-// 	{
-// 		i++;
-// 	}
-// 	return (i);
-// }
+// // when you treat memory, use unsigned char
 
 // int	main(void)
 // {

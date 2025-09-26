@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smurayam <smurayam@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: nnnya <nnnya@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 23:43:21 by smurayam          #+#    #+#             */
-/*   Updated: 2024/11/24 06:10:11 by smurayam         ###   ########.fr       */
+/*   Updated: 2025/09/26 17:36:24 by nnnya            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,4 +48,3 @@ char	*ft_strdup(const char *s)
 // 	free(dup_str);
 // 	return (0);
 // }
-// ft_strlenとか呼び出せるの？unn

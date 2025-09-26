@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smurayam <smurayam@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: nnnya <nnnya@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 11:54:02 by smurayam          #+#    #+#             */
-/*   Updated: 2024/11/25 05:37:22 by smurayam         ###   ########.fr       */
+/*   Updated: 2025/09/26 17:27:12 by nnnya            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,35 +61,4 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 // }
 
 // about l22"cast";it is to be cast while you didnt explicit,its safer to just do it;
-
-// void	*ft_memmove(void *dest, const void *src, size_t n)
-// {
-// 	size_t				i;
-// 	unsigned char		*d;
-// 	const unsigned char	*s = (const unsigned char *)src;
-
-// 	d = (unsigned char *)dest;
-// 	i = 0;
-// 	if (d < s)
-// 	{
-// 		i = 0;
-// 		while (i < n)
-// 		{
-// 			d[i] = s[i];
-// 			i++;
-// 		}
-// 	}
-// 	else
-// 	{
-// 		i = n;
-// 		while (i > 0)
-// 		{
-// 			i--;
-// 			d[i] = s[i];
-// 		}
-// 	}
-// 	return (dest);
-// }
-
-// what??????everything
 // OpenSolaris_b135/lib/libparted/common/lib/memmove.c

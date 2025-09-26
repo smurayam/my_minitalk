@@ -36,7 +36,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	j = ft_strlen(src);
 	return (first_dstlen + ft_strlen(src));
 }
-//size_t	strlcat(char *dst, const char *src, size_t size);
 
 /*
 void	run_test(char *dst, const char *src, size_t size,
@@ -79,52 +78,4 @@ int	main(void)
 	// run_test(NULL, "world", 5, NULL, 0);           // NULLに対する動作（実装次第で追加）
 	return (0);
 }
-
-int	main(void)
-{
-	char		dst[] = "iya";
-	char		dst1[] = "iya";
-	const char	src[] = "haaa";
-	size_t		size;
-
-	size = 3;
-	printf("%zu\n", ft_strlcat(dst, src, size));
-	printf("%s\n", dst);
-	printf("%zu\n", strlcat(dst1, src, size));
-	printf("%s\n", dst1);
-	return (0);
-}
 */
-// unsigned int	ft_strlcat(char *dst, const char *src, unsigned int size)
-//{
-//	unsigned int	dst_len;
-//	unsigned int	src_len;
-//	unsigned int	original_dst_len;
-
-//	dst_len = 0;
-//	src_len = 0;
-//	while (dst[dst_len] != 0 && dst_len < size)
-//		dst_len++;
-//	original_dst_len = dst_len;
-//	while (src[src_len] != 0)
-//		src_len++;
-//	if (dst_len == size)
-//		return (size + src_len);
-//	while (*src != 0 && dst_len < size - 1)
-//	{
-//		dst[dst_len] = *src;
-//		dst_len++;
-//		src++;
-//	}
-//	dst[dst_len] = 0;
-//	return (original_dst_len + src_len);
-//}
-//#include <stdio.h>
-
-// int	main(void)
-//{
-//	char	buffer[10] = "aaa";
-
-//	printf("%u\n", ft_strlcat(buffer, "bbb", 10));
-//	return (0);
-//}

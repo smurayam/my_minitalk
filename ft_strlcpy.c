@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smurayam <smurayam@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: nnnya <nnnya@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 03:38:29 by smurayam          #+#    #+#             */
-/*   Updated: 2024/11/25 14:52:01 by smurayam         ###   ########.fr       */
+/*   Updated: 2025/09/26 17:46:25 by nnnya            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	return (j);
 }
 
-// size_t	strlcpy(char *dst, const char *src, size_t size);
-// #include <stdio.h>
-// #include <string.h>
-
-// size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 // int main(void)
 // {
 //     // 通常のテストケース
@@ -73,66 +68,4 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 //     printf("ft_strlcpyの戻り値: %zu\n\n", strlcpy(NULL, NULL, size3));
 
 //     return (0);
-// }
-// int	main(void)
-// {
-// 	char		dst1[50] = "111";
-// 	const char	src1[50] = "222";
-// 	size_t		size;
-// 	char		dst[50] = "111";
-// 	const char	src[50] = "222";
-
-// 	size = 3;
-// 	printf("ft_strlcpy(return): %zu\n", ft_strlcpy(dst, src, size));
-// 	printf("ft_strlcpy(dst):%s\n", dst);
-// 	printf("strlcpy(return):    %zu\n", strlcpy(dst1, src1, size));
-// 	printf("strlcpy(dst)   :%s\n", dst1);
-// 	// ft_strlcpy(dst, src, size);
-// 	// strlcpy(dst1, src1, size);
-// 	return (0);
-// }
-// #include <string.h>
-// int	ft_strlen(const char *s)
-// {
-// 	int	i;
-
-// 	i = 0;
-// 	while (s[i] != 0)
-// 	{
-// 		i++;
-// 	}
-// 	return (i);
-// }
-
-// size_t	ft_strlcpy(char *dst, const char *src, size_t size)
-// {
-// 	size_t	i;
-// 	size_t	src_len;
-
-// 	i = 0;
-// 	src_len = ft_strlen(src);
-// 	if (size == 0)
-// 		return (src_len);
-// 	while (i + 1 < size && src[i] != 0)
-// 	{
-// 		dst[i] = src[i];
-// 		i++;
-// 	}
-// 	dst[i] = 0;
-// 	return (ft_strlen(src));
-// }
-
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	char		dst[10] = "aaaaa";
-// 	const char	*src = "bbb";
-// 	size_t		result;
-
-// 	// printf("%zu\n", ft_strlcpy("aaaaa", "bbb", 7));
-// 	result = ft_strlcpy(dst, src, 7);
-// 	printf("%s\n", dst);
-// 	printf("%zu\n", result);
-// 	return (0);
 // }

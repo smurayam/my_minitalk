@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smurayam <smurayam@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: nnnya <nnnya@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 07:07:53 by smurayam          #+#    #+#             */
-/*   Updated: 2024/11/25 01:08:57 by smurayam         ###   ########.fr       */
+/*   Updated: 2025/09/26 17:34:10 by nnnya            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// not perfect yet
 // #include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -40,9 +39,7 @@ int	length_of_words(char const *s, char c)
 
 	i = 0;
 	while (s[i] != c)
-	{
 		i++;
-	}
 	return (i);
 }
 
@@ -87,5 +84,5 @@ char	**ft_split(char const *s, char c)
 // 	// printf("%p\n", ft_split(s, c));
 // 	return (0);
 // }
-// // cかcじゃないかがミソ❗
-// mallocno null gard and substr null gard free
+// // Whether it's c or not is important
+// // malloc's null guard and substr null guard free
