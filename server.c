@@ -6,7 +6,7 @@
 /*   By: nnnya <nnnya@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 03:22:25 by nnnya             #+#    #+#             */
-/*   Updated: 2025/12/08 04:03:12 by nnnya            ###   ########.fr       */
+/*   Updated: 2025/12/08 04:43:51 by nnnya            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ static void	handle_signal(int sig)
 	g_data.bit++;
 	if (g_data.bit == 8)
 	{
-		/* libftのft_putchar_fdではなく、writeを直接使うか、
-		   libftにft_putchar_fdがある場合はそれを使っても良い */
 		(void)write(1, &g_data.c, 1);
 		g_data.bit = 0;
 		g_data.c = 0;

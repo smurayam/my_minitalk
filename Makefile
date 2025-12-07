@@ -6,7 +6,7 @@
 #    By: nnnya <nnnya@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/24 22:45:01 by smurayam          #+#    #+#              #
-#    Updated: 2025/12/08 04:40:05 by nnnya            ###   ########.fr        #
+#    Updated: 2025/12/08 04:44:49 by nnnya            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,11 +16,9 @@ NAME_CLIENT = client
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-# Libftのパス設定
 LIBFT_DIR = ./libft01
 LIBFT = $(LIBFT_DIR)/libft.a
 
-# インクルードパスにlibftを追加
 INCLUDES = -I. -I$(LIBFT_DIR)
 
 SRCS_SERVER = server.c
@@ -31,19 +29,15 @@ OBJS_CLIENT = $(SRCS_CLIENT:.c=.o)
 
 all: $(NAME_SERVER) $(NAME_CLIENT)
 
-# libftをコンパイルするルール
 $(LIBFT):
 	$(MAKE) -C $(LIBFT_DIR)
 
-# サーバーのリンク (-Lと-lftでlibftをリンク)
 $(NAME_SERVER): $(OBJS_SERVER) $(LIBFT)
 	$(CC) $(CFLAGS) $(OBJS_SERVER) -L$(LIBFT_DIR) -lft -o $(NAME_SERVER)
 
-# クライアントのリンク
 $(NAME_CLIENT): $(OBJS_CLIENT) $(LIBFT)
 	$(CC) $(CFLAGS) $(OBJS_CLIENT) -L$(LIBFT_DIR) -lft -o $(NAME_CLIENT)
 
-# .cファイルを.oにコンパイルする際のルール
 %.o: %.c
 	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
