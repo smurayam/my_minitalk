@@ -6,7 +6,7 @@
 /*   By: nnnya <nnnya@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 03:23:27 by nnnya             #+#    #+#             */
-/*   Updated: 2025/12/08 04:03:55 by nnnya            ###   ########.fr       */
+/*   Updated: 2025/12/08 05:17:14 by nnnya            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static void	send_char(int pid, char c)
 		else
 			kill(pid, SIGUSR1);
 		bit++;
-		usleep(100);
+		usleep(1500);
 	}
 }
 
@@ -38,7 +38,6 @@ int	main(int argc, char **argv)
 		(void)write(1, "Usage: ./client [PID] [STRING]\n", 31);
 		return (1);
 	}
-	/* libftの関数を使用 */
 	pid = ft_atoi(argv[1]);
 	if (pid <= 0)
 	{

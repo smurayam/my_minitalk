@@ -6,7 +6,7 @@
 /*   By: nnnya <nnnya@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 03:22:25 by nnnya             #+#    #+#             */
-/*   Updated: 2025/12/08 04:43:51 by nnnya            ###   ########.fr       */
+/*   Updated: 2025/12/08 04:52:54 by nnnya            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ int	main(void)
 	g_data.bit = 0;
 	g_data.c = 0;
 	(void)write(1, "Server PID: ", 12);
-	/* libftの関数を使用 */
 	ft_putnbr_fd(getpid(), 1);
 	(void)write(1, "\n", 1);
 	sa.sa_handler = handle_signal;
