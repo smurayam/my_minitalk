@@ -6,51 +6,40 @@
 /*   By: smurayam <smurayam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 03:23:27 by nnnya             #+#    #+#             */
-/*   Updated: 2025/12/23 21:51:21 by smurayam         ###   ########.fr       */
+/*   Updated: 2025/12/24 00:17:12 by smurayam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-int	send_char(char c, pid_t srv_pid)
-{
-	unsigned char	bit_mask;
-	int				idx;
+static int	g_server_sig;
 
-	idx = 0;
-	bit_mask = (unsigned char)128;
-	while (idx < 8)
-	{
-		if ((c & bit_mask) == 0)
-			kill(srv_pid, SIGUSR1);
-		else if ((c & bit_mask) != 0)
-			kill(srv_pid, SIGUSR2);
-		bit_mask = bit_mask / 2;
-		idx++;
-		usleep(10000);
-	}
-	return (0);
-}
-
-int	send_str(char *str, pid_t srv_pid)
+int	send_str(char *str, int pid)
 {
 	int	i;
 
-	i = 0;
-	while (str[i] != 0)
+	while (*str != 0)
 	{
-		send_char(str[i], srv_pid);
-		i++;
+		i = 7;
+		while (i >= 0)
+		{
+			if (*str & (1 << i))
+				kill(pid, SIGUSR2) else kill(pid, SIGUSR1);
+			while (!g_server_sig)
+				;
+			g_server_sig = 0;
+			i--;
+		}
+		str++;
 	}
-	send_char('\n', srv_pid);
-	return (0);
 }
 
-int	main(int argc, char *av[])
+int	main(int ac, char **av)
 {
-	pid_t	srv_pid;
-
-	(void)argc;
-	srv_pid = ft_atoi(av[1]);
-	send_str(av[2], srv_pid);
+	if (ac != 3)
+	{
+		ft_printf("Usage: %s <Server PID> <Stinrg to send>\n");
+		return (1);
+	}
+	signal(SIGUSR)
 }

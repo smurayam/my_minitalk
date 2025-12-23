@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minitalk.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nnnya <nnnya@student.42.fr>                +#+  +:+       +#+        */
+/*   By: smurayam <smurayam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 03:21:48 by nnnya             #+#    #+#             */
-/*   Updated: 2025/12/08 04:44:06 by nnnya            ###   ########.fr       */
+/*   Updated: 2025/12/23 22:05:10 by smurayam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,15 @@
 
 # include "Libft01/libft.h"
 # include <signal.h>
-# include <unistd.h>
+# include <stdio.h>
 # include <stdlib.h>
+# include <time.h>
+# include <unistd.h>
 
 typedef struct s_server
 {
 	int				bit;
 	unsigned char	c;
-}	t_server;
+}					t_server;
 
 #endif
