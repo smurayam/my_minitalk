@@ -3,53 +3,35 @@
 /*                                                        :::      ::::::::   */
 /*   client.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nnnya <nnnya@student.42.fr>                +#+  +:+       +#+        */
+/*   By: smurayam <smurayam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 03:23:27 by nnnya             #+#    #+#             */
-/*   Updated: 2025/12/08 05:17:14 by nnnya            ###   ########.fr       */
+/*   Updated: 2025/12/23 21:18:15 by smurayam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-static void	send_char(int pid, char c)
+int	main(int argc, char *argv[])
 {
-	int	bit;
+	pid_t			srv_pid;
+	char			c;
+	int				idx;
+	unsigned char	bit_mask;
 
-	bit = 0;
-	while (bit < 8)
+	(void)argc;
+	srv_pid = atoi(argv[1]);
+	c = argv[2][0];
+	idx = 0;
+	bit_mask = (unsigned char)128;
+	while (idx < 8)
 	{
-		if ((c >> bit) & 1)
-			kill(pid, SIGUSR2);
-		else
-			kill(pid, SIGUSR1);
-		bit++;
-		usleep(1500);
+		if ((c & bit_mask) == 0)
+			kill(srv_pid, SIGUSR1);
+		else if ((c & bit_mask) != 0)
+			kill(srv_pid, SIGUSR2);
+		bit_mask = bit_mask / 2;
+		idx++;
+		usleep(10000);
 	}
-}
-
-int	main(int argc, char **argv)
-{
-	int	pid;
-	int	i;
-
-	if (argc != 3)
-	{
-		(void)write(1, "Usage: ./client [PID] [STRING]\n", 31);
-		return (1);
-	}
-	pid = ft_atoi(argv[1]);
-	if (pid <= 0)
-	{
-		(void)write(1, "Error: Invalid PID\n", 19);
-		return (1);
-	}
-	i = 0;
-	while (argv[2][i])
-	{
-		send_char(pid, argv[2][i]);
-		i++;
-	}
-	send_char(pid, '\n');
-	return (0);
 }
