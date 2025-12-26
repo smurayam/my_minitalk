@@ -6,7 +6,7 @@
 #    By: smurayam <smurayam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/24 22:45:01 by smurayam          #+#    #+#              #
-#    Updated: 2025/12/23 21:12:58 by smurayam         ###   ########.fr        #
+#    Updated: 2025/12/26 20:11:49 by smurayam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ NAME_CLIENT = client
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-LIBFT_DIR = Libft01
+LIBFT_DIR = printf/Libft01
 LIBFT = $(LIBFT_DIR)/libft.a
 
 INCLUDES = -I. -I$(LIBFT_DIR)
