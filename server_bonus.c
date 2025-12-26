@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   server.c                                           :+:      :+:    :+:   */
+/*   server_bonus_bonus.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smurayam <smurayam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 03:22:25 by nnnya             #+#    #+#             */
-/*   Updated: 2025/12/24 00:17:13 by smurayam         ###   ########.fr       */
+/*   Updated: 2025/12/26 20:28:18 by smurayam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,14 @@
 
 static int	g_char_buf;
 
-void	handler(int sig, struct __siginfo *info, void *p)
+void	handler(int sig, siginfo_t *info, void *p)
 {
 	ssize_t	res;
 
 	(void)p;
-	g_char_buf = (g_char_buf << 1) | (sig - SIGUSR1);
+	g_char_buf <<= 1;
+	if (sig == SIGUSR2)
+		g_char_buf |= 1;
 	if (g_char_buf & (1 << 8))
 	{
 		res = write(1, &g_char_buf, 1);
@@ -45,6 +47,6 @@ int	main(void)
 	sigaction(SIGUSR2, &act, NULL);
 	ft_printf("Server PID: %d\n", getpid());
 	while (1)
-		;
+		pause();
 	return (0);
 }

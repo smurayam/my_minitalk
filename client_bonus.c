@@ -6,7 +6,7 @@
 /*   By: smurayam <smurayam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 03:23:27 by nnnya             #+#    #+#             */
-/*   Updated: 2025/12/24 17:43:05 by smurayam         ###   ########.fr       */
+/*   Updated: 2025/12/26 21:56:51 by smurayam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	g_server_sig;
 
-int	send_str(char *str, int pid)
+int	send_str(int pid, char *str)
 {
 	int	i;
 
@@ -34,6 +34,7 @@ int	send_str(char *str, int pid)
 		}
 		str++;
 	}
+	return (0);
 }
 
 void	handler(int sig)
@@ -45,12 +46,12 @@ int	main(int ac, char **av)
 {
 	if (ac != 3)
 	{
-		ft_printf("Usage: %s <Server PID> <Stinrg to send>\n");
+		ft_printf("Usage: <Server PID> <Stinrg to send>\n");
 		return (1);
 	}
 	signal(SIGUSR1, handler);
 	signal(SIGUSR2, handler);
 	g_server_sig = 0;
-	send_by_bits(ft_atoi(av[1], av[2]));
+	send_str(ft_atoi(av[1]), av[2]);
 	return (0);
 }
