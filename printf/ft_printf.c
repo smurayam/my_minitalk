@@ -3,7 +3,8 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nnnya <nnnya@student.42.fr>                +#+  +:+       +#+        */
+/*   By: smurayam <smurayam@student.42.fr>                +#+  +:+
+	+#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 20:30:42 by smurayam          #+#    #+#             */
 /*   Updated: 2025/12/07 18:58:55 by nnnya            ###   ########.fr       */
