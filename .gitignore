@@ -1,4 +1,4 @@
 *.o
 *.a
-client_bonus
-server_bonus
+client
+server

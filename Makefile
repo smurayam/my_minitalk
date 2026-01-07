@@ -6,12 +6,12 @@
 #    By: smurayam <smurayam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/24 22:45:01 by smurayam          #+#    #+#              #
-#    Updated: 2025/12/26 22:12:10 by smurayam         ###   ########.fr        #
+#    Updated: 2026/01/07 22:03:20 by smurayam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME_SERVER = server_bonus
-NAME_CLIENT = client_bonus
+NAME_SERVER = server
+NAME_CLIENT = client
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
